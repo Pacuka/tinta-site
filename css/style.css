@@ -598,24 +598,31 @@ strong {
   color: var(--muted);
 }
 .shots {
+  --shot-slide-width: min(64vw, 300px, calc(100vw - 80px));
   list-style: none;
   padding: 0;
   margin-top: 20px;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 68%;
+  grid-auto-columns: var(--shot-slide-width);
   gap: 16px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
+  padding-inline: max(20px, calc((100% - var(--shot-slide-width)) / 2));
   scrollbar-width: thin;
   padding-bottom: 12px;
+  scroll-behavior: smooth;
 }
 .shots li {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 @media (min-width: 600px) {
   .shots {
     grid-auto-columns: 40%;
+    padding-inline: 0;
+  }
+  .shots li {
+    scroll-snap-align: start;
   }
 }
 @media (min-width: 900px) {
@@ -625,6 +632,14 @@ strong {
     gap: 48px;
     overflow: visible;
     padding-bottom: 0;
+    padding-inline: 0;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shots {
+    scroll-behavior: auto;
   }
 }
 .shots figcaption {
@@ -684,11 +699,13 @@ strong {
 }
 .split-shot {
   width: min(260px, 70%);
+  justify-self: center;
 }
 @media (min-width: 860px) {
   .split-shot {
     width: 100%;
     margin-top: 8px;
+    justify-self: start;
   }
 }
 
@@ -752,6 +769,13 @@ strong {
 .qa p {
   color: var(--muted);
   margin-top: 6px;
+}
+.qa .fp {
+  display: block;
+  margin: 8px 0;
+  font-size: .85em;
+  word-break: break-all;
+  color: var(--text);
 }
 @media (min-width: 800px) {
   .qa {

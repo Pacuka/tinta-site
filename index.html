@@ -6,14 +6,14 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Tinta – az e-naplód, ahogy szeretnéd</title>
-  <meta name="description" content="Tinta: ingyenes, nem hivatalos e-napló app KRÉTA-fiókhoz. Jegyek, órarend, üzenetek, fogadóórák diákoknak és szülőknek, Androidra és iPhone-ra.">
+  <meta name="description" content="Tinta: ingyenes, nem hivatalos e-napló app KRÉTA-fiókhoz. Jegyek, órarend, házi feladatok, üzenetek, fogadóórák diákoknak és szülőknek, Androidra és iPhone-ra.">
   <meta name="theme-color" content="#111318">
   <link rel="canonical" href="https://tinta.pacuka.hu/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="hu_HU">
   <meta property="og:site_name" content="Tinta">
   <meta property="og:title" content="Tinta – az e-naplód, ahogy szeretnéd">
-  <meta property="og:description" content="Ingyenes, nem hivatalos e-napló app KRÉTA-fiókhoz. Jegyek, órarend, üzenetek, fogadóórák diákoknak és szülőknek.">
+  <meta property="og:description" content="Ingyenes, nem hivatalos e-napló app KRÉTA-fiókhoz. Jegyek, órarend, házi feladatok, üzenetek, fogadóórák diákoknak és szülőknek.">
   <meta property="og:url" content="https://tinta.pacuka.hu/">
   <meta property="og:image" content="https://tinta.pacuka.hu/img/og.png">
   <meta property="og:image:width" content="1200">
@@ -24,6 +24,7 @@
   <link rel="preload" href="fonts/Outfit-800.woff2" as="font" type="font/woff2" crossorigin>
   <script src="js/theme-boot.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/anim.css">
 </head>
 <body>
 <a class="skip" href="#fo">Ugrás a tartalomhoz</a>
@@ -61,7 +62,7 @@
       <div class="hero-text">
       <h1>Az e-naplód,<br><span class="nowrap">ahogy szeretnéd.</span></h1>
       <svg class="ink-stroke" viewBox="0 0 360 64" aria-hidden="true"><path class="ink-line" d="M6 38 C 70 26, 150 46, 232 32 S 300 26, 318 33"/><g class="ink-blot"><path d="M55 24c7 0 9 8 15 7s12-6 15 0-3 10-1 15 10 7 7 14-10 3-12 9 2 13-6 15-10-6-16-4-9 9-15 5-1-10-7-13-13 0-13-8 8-7 7-14-9-8-4-14 10 1 13-5c2-6 5-11 9-11S50 24 55 24z" transform="translate(322 33) scale(.5) translate(-54 -56)"/><circle cx="356" cy="50" r="3.2"/><circle cx="352" cy="14" r="2.2"/></g><g class="ink-nib"><g transform="rotate(32) scale(.62) translate(-54 -88)"><path d="M54 88 L36 54 Q34 50 37 46 L48 30 L60 30 L71 46 Q74 50 72 54 Z"/><rect x="45" y="20" width="18" height="12" rx="3"/><path class="nib-slit" d="M54 86 L54 62"/><circle class="nib-hole" cx="54" cy="57" r="5.5"/></g></g></svg>
-      <p class="lead">Jegyek, órarend, üzenetek egy appban, amit szívesen nyitsz meg. Akkor is, ha épp egyes jött. Diákoknak és szülőknek.</p>
+      <p class="lead">Jegyek, órarend, házi feladatok és üzenetek egy appban, amit szívesen nyitsz meg. Akkor is, ha épp egyes jött. Diákoknak és szülőknek.</p>
       <p class="hero-actions">
         <a class="btn btn--primary" href="#letoltes">Letöltés Androidra</a>
         <a class="text-link" href="#iphone">Letöltés iPhone-ra <span aria-hidden="true">→</span></a>
@@ -83,7 +84,7 @@
         <h2>Így néz ki.</h2>
         <p>Valódi képernyőképek. A diák kitalált, a jegyei is, úgyhogy senkit nem buktattam le.</p>
       </div>
-      <ul class="shots" aria-label="Képernyőképek, oldalra görgethető">
+      <ul class="shots" id="shots-gallery" aria-label="Képernyőképek, oldalra görgethető" aria-roledescription="karusszel">
         <li class="phone-only"><figure>
           <div class="screen"><img class="shot-dark" src="img/shots/kezdolap-dark.webp" width="486" height="1080" loading="lazy" alt="A Tinta kezdőlapja: üdvözlés, új üzenetek, házi feladat, fogadóóra-foglalás és dolgozat egy listában"><img class="shot-light" src="img/shots/kezdolap-light.webp" width="486" height="1080" loading="lazy" alt="A Tinta kezdőlapja: üdvözlés, új üzenetek, házi feladat, fogadóóra-foglalás és dolgozat egy listában"></div>
           <figcaption>Kezdőlap: minden új egy helyen</figcaption></figure></li>
@@ -105,15 +106,15 @@
     <div class="container col">
       <p class="sec-no" aria-hidden="true">Funkciók</p>
       <h2>Minden ott van, ahol keresed.</h2>
-      <p class="lead">Ugyanazok az adatok, mint a hivatalos KRÉTA-appban, csak nem kell vadásznod rájuk. Egy pillantás, és tudod, mi a helyzet.</p>
+      <p class="lead">Ugyanazok az adatok, mint a hivatalos KRÉTA-appban, csak nem kell vadásznod rájuk, és nem kell háromszor újraindítanod, hogy betöltsön. Egy pillantás, és tudod, mi a helyzet.</p>
       <div class="features">
         <div class="feature">
-          <h3>A te színeid</h3>
+          <h3>Válassz témát</h3>
           <p>Nyugodt, letisztult felület. Témát is választhatsz: Kobalt, Fekete-sárga, Petrol, Üveg vagy Androidon a telefonod saját színei, sötét és világos változatban is.</p>
         </div>
         <div class="feature">
           <h3>Net nélkül is megy</h3>
-          <p>Gyorsan indul, és a legutóbbi adataidat akkor is mutatja, ha épp nincs net. A buszon is megnézheted, hányadik órád következik.</p>
+          <p>Gyorsan indul, és a legutóbbi adataidat akkor is mutatja, ha épp nincs net. Vagy ha épp a KRÉTA nincs. 2026 szeptemberében például napokig akadozott. A buszon is megnézheted, hányadik órád következik.</p>
         </div>
         <div class="feature">
           <h3>Szól, ha kell</h3>
@@ -121,7 +122,7 @@
         </div>
         <div class="feature">
           <h3>Az adataid nálad maradnak</h3>
-          <p>A jegyeid csak a telefonod és a KRÉTA között utaznak. Nincs reklám, nincs követés, nincs statisztika. Én sem tudom, hányas lett a dolgozatod.</p>
+          <p>A jegyeid csak a telefonod és a KRÉTA között utaznak. Nincs reklám, nincs követés, nincs statisztika. Én sem tudom, hányas lett a dolgozatod. A KRÉTA fejlesztőjét 2024-ben <a href="https://telex.hu/techtud/2024/02/21/kreta-hekkertamadas-feltores-szemelyes-adatok-naih-vizsgalat-eredmeny-adatvedelmi-birsag">110 millió forintra bírságolta</a> az adatvédelmi hatóság egy hekkertámadás miatt. Tőlem nincs mit ellopni, mert nincs szerverem.</p>
         </div>
       </div>
     </div>
@@ -191,7 +192,7 @@
       <div class="faq">
         <div class="qa">
           <h3>Ez a hivatalos KRÉTA-app?</h3>
-          <p>Nem. A Tinta független, nem hivatalos alkalmazás. Ugyanonnan tölti le az adataidat, ahonnan a hivatalos KRÉTA-app is. Nem áll kapcsolatban az eKRÉTA Informatikai Zrt.-vel, és az nem is támogatja.</p>
+          <p>Nem. A Tinta független, nem hivatalos alkalmazás. Ugyanonnan tölti le az adataidat, ahonnan a hivatalos KRÉTA-app is. Nem áll kapcsolatban a KRÉTA üzemeltetőjével (EduDev Zrt., korábban eKRÉTA Informatikai Zrt.), és az nem is támogatja.</p>
         </div>
         <div class="qa">
           <h3>Biztonságos? Látja valaki a jelszavam?</h3>
@@ -199,11 +200,39 @@
         </div>
         <div class="qa">
           <h3>Miért nincs a Google Play Áruházban?</h3>
-          <p>Egyelőre közvetlen letöltéssel terjesztem, mert így gyorsabban jönnek az újítások. Később talán az áruházba is felkerül. A fájlt a saját kulcsommal írom alá, így a telepített Tintát csak az én frissítéseim írhatják felül. Ezért mindig innen vagy a GitHubról töltsd le, máshonnan ne.</p>
+          <p>Mert ott nem élne sokáig. 2020 decemberében az eKRÉTA kérésére a Google egy csapásra levette a Play Áruházból a Filc Naplót, az Arisztokrétát és még két másik KRÉTA-klienst (Napló+, K-Napló), összesen nagyjából 20 000 aktív telepítéssel (<a href="https://web.archive.org/web/2021/https://filcnaplo.hu/dmca/">a Filc csapatának beszámolója</a>). 2021 szeptemberében a Filc még egyszer felkerült a Playre, és 11 napot élt. Később a reFilc is eltűnt onnan, a Szivacsot pedig már korábban technikai úton ellehetetlenítették. Nem szeretném, ha a Tinta is erre a sorsra jutna, úgyhogy marad a közvetlen letöltés. Bónusz: így az újítások is gyorsabban jönnek. A fájlt a saját kulcsommal írom alá, így a telepített Tintát csak az én frissítéseim írhatják felül. Ezért mindig innen vagy a GitHubról töltsd le, máshonnan ne.</p>
+        </div>
+        <div class="qa">
+          <h3>Hogyan frissül?</h3>
+          <p>Androidon a Tinta minden indításkor megnézi a GitHubon, van-e új verzió, és ha van, szól. Egy koppintással letöltöd, a telepítést pedig a telefonod kéri jóváhagyni. Az adataid és a beállításaid megmaradnak. Ha az <a href="https://obtainium.imranr.dev/">Obtainiumot</a> használod, add hozzá ezt a címet: <span class="nowrap">github.com/Pacuka/tinta</span>, és onnantól az is figyeli a frissítéseket.</p>
+        </div>
+        <div class="qa">
+          <h3>Honnan tudom, hogy a fájl tényleg tőled van?</h3>
+          <p>Minden Tinta APK-t ugyanazzal a kulccsal írok alá. A tanúsítvány SHA-256-ujjlenyomata: <code class="fp">AA:48:66:1E:28:55:5B:22:FA:D6:FB:FD:B6:C0:C6:79:68:62:9B:FA:9F:5C:FD:12:1D:48:7E:22:13:7F:F7:AA</code> Az Android magától is visszautasítja azt a frissítést, amelyet más kulcs írt alá, úgyhogy egy hamisított Tinta nem tudja felülírni a tiédet.</p>
+        </div>
+        <div class="qa">
+          <h3>Hogyan működnek az értesítések?</h3>
+          <p>A Tinta a háttérben nagyjából negyedóránként megnézi a KRÉTÁ-ban, van-e új jegy vagy elmaradó óra. Ez teljesen a telefonodon történik, nincs köztes értesítési szerver. Az akkumulátorkímélő beállítások késleltethetik: Xiaomi-telefonokon engedélyezd az automatikus indítást, és vedd le a Tintáról az akkumulátorkorlátozást. iPhone-on akkor néz körül, amikor az iOS engedi, ezért ott késhetnek az értesítések.</p>
+        </div>
+        <div class="qa">
+          <h3>Valami nem működik. Kinek szóljak?</h3>
+          <p>Nekem, ne az iskolának és ne a KRÉTA ügyfélszolgálatának: ők nem tudnak segíteni a Tintával. Hibát a <a href="https://github.com/Pacuka/tinta/issues">GitHubon</a> jelezhetsz, vagy ha az app hibaképernyőt mutat, közvetlenül onnan is. A hibajegyek nyilvánosak, ezért ne írj bele nevet, iskolát, jegyet vagy más személyes adatot. Írd le, mit csináltál, mire számítottál, és mi történt helyette.</p>
+        </div>
+        <div class="qa">
+          <h3>Fontos dolgokban is számíthatok rá?</h3>
+          <p>A Tinta ugyanazokat az adatokat mutatja, mint a hivatalos app, de egy ember hobbiprojektje, ingyenes, és garancia nélkül kapod, úgy, ahogy van. Ha valami igazán fontos, például határidő, igazolás vagy félévi jegy, nézd meg a hivatalos KRÉTÁ-ban is. Ha egy értesítés késik vagy elmarad, vagy egy adat rosszul jelenik meg, azért nem tudok felelősséget vállalni.</p>
+        </div>
+        <div class="qa">
+          <h3>Minden funkciót kipróbáltál?</h3>
+          <p>Élesben nem mindet lehet kipróbálni: egy igazolást vagy egy fogadóóra-foglalást nem küldhetek be csak tesztelésből. Ezért minden funkciót egy tesztszerveren is végigpróbáltam, amely úgy válaszol, mint a KRÉTA. Elvileg tehát minden hibátlanul működik, de ha mégis valami gondot látsz, szólj.</p>
+        </div>
+        <div class="qa">
+          <h3>Használtál mesterséges intelligenciát?</h3>
+          <p>Igen, a kód nagy részét AI (Claude) írja. Hogy mi kerüljön az appba, hogyan nézzen ki és mikor jelenjen meg, azt én döntöm el, és minden változást kipróbálok a saját telefonomon, mielőtt kiadnám. A forráskód nyilvános, úgyhogy nem kell elhinned nekem: bárki megnézheti, mit csinál az app.</p>
         </div>
         <div class="qa">
           <h3>Mennyibe kerül?</h3>
-          <p>Semennyibe. Nincs benne reklám, és fizetős funkció sincs. Tényleg.</p>
+          <p>Semennyibe. Nincs benne reklám, és fizetős funkció sincs. Tényleg. Összehasonlításul: a KRÉTA fenntartása <a href="https://telex.hu/belfold/2026/06/03/kreta-monopolhelyzet-kozoktatas-informatika-lannert-judit-fauszt-zoltan">évente több mint 7 milliárd forintba</a> kerül, az adódból.</p>
         </div>
         <div class="qa">
           <h3>Mi köze a Folióhoz és a Firkához?</h3>
@@ -217,7 +246,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p class="disclaimer">Nem hivatalos KRÉTA-alkalmazás, nem áll kapcsolatban az eKRÉTA Informatikai Zrt.-vel.</p>
+    <p class="disclaimer">A Tinta nem hivatalos KRÉTA-alkalmazás, és nem áll kapcsolatban a KRÉTA üzemeltetőjével, az Educational Development Informatikai Zrt.-vel (korábban eKRÉTA Informatikai Zrt.).</p>
     <p>Készítette <a href="https://github.com/Pacuka">Pacuka</a>, a Folio nyílt forráskódú projektre építve. AGPL-3.0 licenc.</p>
     <p class="footer-links">
       <a href="adatvedelem.html">Adatvédelem</a>
@@ -228,5 +257,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+  <script src="js/anim.js" defer></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Adatvédelem – Tinta</title>
-  <meta name="description" content="Milyen adatokat kezel a Tinta app és ez a weboldal? Röviden: nem gyűjtök rólad semmit.">
+  <meta name="description" content="Tájékoztató a Tinta alkalmazás és a weboldal adatkezeléséről, az adattárolásról és az adat továbbításáról.">
   <meta name="theme-color" content="#111318">
   <link rel="canonical" href="https://tinta.pacuka.hu/adatvedelem.html">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -44,42 +44,47 @@
 <main id="fo">
   <article class="article">
     <!-- Élesítés előtt ügyvéd vagy adatvédelmi szakember nézze át ezt a szöveget!
-         A tárhely GitHub Pages (IP-naplózás, lásd „Ez a weboldal”). Ha statisztika (Umami) kerül az oldalra, ezt a részt is át kell írni. -->
+         A tárhely GitHub Pages + Cloudflare (IP-naplózás, lásd „Ez a weboldal”). Ha statisztika (Umami) kerül az oldalra, ezt a részt is át kell írni. -->
     <a class="back" href="./"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Vissza a főoldalra</a>
     <h1>Adatvédelem</h1>
-    <p>Röviden: a Tinta nem gyűjt rólad adatot, és én sem látom, mit csinálsz benne. Ez az oldal leírja, pontosan mi történik az adataiddal az appban és ezen a weboldalon. A Tintát magánszemélyként, hobbiból fejlesztem (Pacuka).</p>
+    <p>Ez a tájékoztató ismerteti, hogy a Tinta alkalmazás és a weboldal használata során milyen adatok tárolása vagy továbbítása történik, kikhez kerülhetnek ezek az adatok, és milyen célból.</p>
 
     <h2>Az app</h2>
     <ul>
-      <li><strong>Nincs statisztika, nincs követés.</strong> A Tinta nem gyűjt használati adatokat, és nem küld magától hibajelentést.</li>
-      <li><strong>A tanulmányi adataid</strong> (jegyek, órarend, üzenetek, hiányzások) csak a telefonod és a KRÉTA szerverei között közlekednek, titkosított kapcsolaton. Nincs köztes szerver.</li>
-      <li><strong>Belépés:</strong> a Tinta az appon belül megnyitja a KRÉTA hivatalos bejelentkezési oldalát (<span class="nowrap">idp.e-kreta.hu</span>), ott adod meg a jelszavad. A Tinta nem kéri el, nem tárolja és sehova nem küldi tovább; ezt a nyilvános forráskódban bárki ellenőrizheti.</li>
-      <li><strong>A telefonon tárolt adatok</strong> (a legutóbb letöltött adatok és a belépéshez szükséges kulcs) a telefonodon maradnak. Androidon a felhőmentésbe sem kerülnek, iPhone-on viszont az iCloud-mentés része lehetnek.</li>
-      <li><strong>Amit beküldesz</strong> (üzenet, igazolás, fogadóóra-foglalás), az közvetlenül a <span class="nowrap">KRÉTA-ba</span>, vagyis az iskoládhoz megy, ugyanúgy, mint a hivatalos appból.</li>
+      <li><strong>Használati statisztika:</strong> az alkalmazás nem gyűjt használati statisztikát, nem követi az alkalmazáshasználatot, és nem küld automatikusan hibajelentést.</li>
+      <li><strong>Tanulmányi adatok:</strong> a jegyek, az órarend, az üzenetek és a hiányzások adatai titkosított kapcsolaton keresztül jutnak el az eszköz és a KRÉTA szerverei között. Az alkalmazás ezeket nem továbbítja saját köztes szerverre.</li>
+      <li><strong>Bejelentkezés:</strong> a jelszót a KRÉTA hivatalos bejelentkezési oldalán (<span class="nowrap">idp.e-kreta.hu</span>) kell megadni, amely az alkalmazáson belül nyílik meg. A Tinta nem kéri el és nem tárolja a jelszót. A sikeres bejelentkezéshez szükséges hozzáférési adatokat az alkalmazás az eszközön tárolja.</li>
+      <li><strong>Helyi adattárolás:</strong> az alkalmazás a legutóbb letöltött adatokat és a fiók használatához szükséges hozzáférési adatokat az eszközön tárolja. Androidon az alkalmazás letiltja ezek felhőmentését; iPhone-on az adatok bekerülhetnek az iCloud-mentésbe.</li>
+      <li><strong>Értesítések:</strong> az új bejegyzések ellenőrzése az eszközön, a háttérben történik, közvetlenül a KRÉTA szervereiről. A Tinta ehhez nem használ külső értesítési szolgáltatást vagy saját szervert.</li>
+      <li><strong>Beküldött adatok:</strong> az alkalmazásból elküldött üzenetek, igazolások és fogadóóra-foglalások közvetlenül a KRÉTA rendszerébe, így az érintett oktatási intézményhez kerülnek.</li>
     </ul>
 
     <h2>Mikor kapcsolódik máshová az app?</h2>
-    <p>Ilyenkor az adott szolgáltatás – mint minden weboldal – látja a telefonod IP-címét. Más adatot a Tinta nem küld nekik.</p>
+    <p>Az alábbi szolgáltatásokhoz történő kapcsolódás során a szolgáltatók megismerhetik a kapcsolat technikai adatait, például az IP-címet.</p>
     <ul>
-      <li><strong>GitHub:</strong> új verzió keresése. Ha egy hibánál a „Hiba jelentése” gombot választod, egy előre kitöltött hibajegy nyílik meg, és beküldés előtt látod, mi kerül bele. A hibajegy nyilvános, ezért ne írj bele nevet, iskolát vagy jegyet.</li>
-      <li><strong>A Firka szervere:</strong> csak ha témát osztasz meg vagy töltesz le.</li>
-      <li><strong>Google Fonts:</strong> csak ha a beállításokban másik betűtípust választasz.</li>
+      <li><strong>GitHub:</strong> az alkalmazás a GitHub szolgáltatását használja az új verziók ellenőrzésére és letöltésére. Ilyenkor a GitHub az IP-címet és a kérés technikai adatait látja. A „Hiba jelentése” funkció kiválasztásakor egy előre kitöltött hibajegy nyílik meg a GitHubon; annak tartalma beküldés előtt ellenőrizhető. A hibajegyek nyilvánosak, ezért azokban nem javasolt személyes vagy tanulmányi adatot megadni.</li>
+      <li><strong>Firka:</strong> az alkalmazás csak téma megosztásakor vagy letöltésekor kapcsolódik a Firka szerveréhez.</li>
+      <li><strong>Google Fonts:</strong> az alkalmazás csak akkor tölt le betűtípust a Google Fonts szolgáltatásából, ha a beállításokban a felhasználó másik betűtípust választ.</li>
     </ul>
 
+    <h2>Kijelentkezés és törlés</h2>
+    <p>Kijelentkezéskor az alkalmazás törli az eszközről az adott fiók hozzáférési adatait és a letöltött tanulmányi adatokat. Az alkalmazás eltávolításakor az eszközön tárolt összes adat törlődik.</p>
+    <p>Mivel a Tinta fejlesztője a felhasználókról semmilyen adatot nem gyűjt és nem tárol, nincs olyan adat, amelyet kiadhatna, helyesbíthetne vagy törölhetne. A KRÉTA rendszerében tárolt adatokkal kapcsolatban az érintett oktatási intézményhez vagy a KRÉTA üzemeltetőjéhez, az Educational Development Informatikai Zrt.-hez lehet fordulni.</p>
+
     <h2>Ez a weboldal</h2>
-    <p>Ez a weboldal nem használ sütit, statisztikát, külső betűtípust vagy szkriptet. Ha világos vagy sötét témát választasz, azt csak a saját böngésződ jegyzi meg.</p>
-    <p>Az oldalt a GitHub Pages szolgáltatja, amely biztonsági okból naplózza a látogatók IP-címét. Erre a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub adatvédelmi szabályai</a> vonatkoznak; ezekhez az adatokhoz én nem férek hozzá.</p>
+    <p>A weboldal nem használ sütiket, statisztikai mérőeszközt, külső betűtípust vagy külső szkriptet. A világos vagy sötét téma beállítását a böngésző helyben tárolja.</p>
+    <p>A weboldalt a GitHub Pages szolgáltatja, és a Cloudflare hálózatán keresztül érhető el. Mindkét szolgáltató látja a látogatók IP-címét a kérések kiszolgálásához, és biztonsági célból naplózhatja azt. A naplókhoz a Tinta fejlesztője nem fér hozzá. További információ a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a> és a <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> adatvédelmi tájékoztatójában található.</p>
 
     <h2>Kapcsolat</h2>
-    <p>Kérdésed van, vagy hibát találtál? Írj nekem a <a href="https://github.com/Pacuka/tinta/issues">GitHubon</a>. Ez nyilvános, úgyhogy személyes adatot ne írj bele.</p>
+    <p>Kérdés vagy hibajelzés a <a href="https://github.com/Pacuka/tinta/issues">GitHubon</a> küldhető be. A hibajegyek nyilvánosak, ezért kérjük, ne szerepeljen bennük személyes vagy tanulmányi adat.</p>
 
-    <p class="small">Utoljára frissítve: 2026. október 28.</p>
+    <p class="small">Utoljára frissítve: 2026. október 31.</p>
   </article>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p class="disclaimer">Nem hivatalos KRÉTA-alkalmazás, nem áll kapcsolatban az eKRÉTA Informatikai Zrt.-vel.</p>
+    <p class="disclaimer">A Tinta nem hivatalos KRÉTA-alkalmazás, és nem áll kapcsolatban a KRÉTA üzemeltetőjével, az Educational Development Informatikai Zrt.-vel (korábban eKRÉTA Informatikai Zrt.).</p>
     <p>Készítette <a href="https://github.com/Pacuka">Pacuka</a>, a Folio nyílt forráskódú projektre építve. AGPL-3.0 licenc.</p>
     <p class="footer-links">
       <a href="adatvedelem.html">Adatvédelem</a>

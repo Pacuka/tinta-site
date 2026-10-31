@@ -1,0 +1,43 @@
+/* Test build: everything moves. */
+.a-in { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+.a-in.a-left { transform: translateX(-40px); }
+.a-in.a-right { transform: translateX(40px); }
+.a-in.a-zoom { transform: scale(.92); }
+.a-in.is-in { opacity: 1; transform: none; }
+.sec-no.a-in { transform: translateX(-24px); letter-spacing: .4em; transition-property: opacity, transform, letter-spacing; }
+.sec-no.a-in.is-in { letter-spacing: .08em; transform: none; }
+.stamp { display: inline-block; }
+.stamp.is-in { animation: a-stamp .55s cubic-bezier(.3,1.6,.5,1) .3s both; }
+@keyframes a-stamp { 0% { transform: scale(3.6) rotate(-22deg); opacity: 0; } 60% { transform: scale(.9) rotate(-5deg); opacity: 1; } 80% { transform: scale(1.06) rotate(-7deg); } 100% { transform: scale(1) rotate(-6deg); opacity: 1; } }
+.screen { transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s; }
+.screen:hover { transform: translateY(-8px) rotate(-1deg); }
+.split-shot .screen { animation: a-float 5s ease-in-out infinite; }
+@keyframes a-float { 50% { transform: translateY(-10px); } }
+.btn { transition: transform .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-3px) scale(1.03); }
+.btn:active { transform: scale(.97); }
+.feature h3, .qa h3 { transition: color .3s, transform .3s; }
+.feature:hover h3, .qa:hover h3 { transform: translateX(6px); }
+.a-bar { position: fixed; top: 0; left: 0; height: 3px; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: currentColor; opacity: .6; z-index: 99; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+  .a-in, .a-in.is-in { opacity: 1; transform: none; transition: none; }
+  .stamp.is-in, .split-shot .screen { animation: none; }
+  .a-bar { display: none; }
+}
+/* Turbo */
+.a-word { display: inline-block; opacity: 0; transform: translateY(.6em) rotate(4deg); animation: a-word .6s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 150ms); }
+@keyframes a-word { to { opacity: 1; transform: none; } }
+.a-ripple { position: absolute; border-radius: 50%; background: currentColor; opacity: .35; transform: scale(0); animation: a-ripple .6s ease-out forwards; pointer-events: none; }
+@keyframes a-ripple { to { transform: scale(4); opacity: 0; } }
+.btn { position: relative; overflow: hidden; }
+.section h2.is-in { background: linear-gradient(90deg, currentColor 40%, var(--accent, #3b5bdb) 50%, currentColor 60%) 0 0 / 300% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: a-shine 2.2s ease .4s 1 both; }
+@keyframes a-shine { from { background-position: 100% 0; } to { background-position: 0 0; } }
+.shots li .screen { will-change: transform; }
+@media (prefers-reduced-motion: reduce) {
+  .a-word { opacity: 1; transform: none; animation: none; }
+  .section h2.is-in { animation: none; -webkit-text-fill-color: currentColor; background: none; }
+  .a-ripple { display: none; }
+}
+
+/* The stamp sits inside the h2: keep its own colour when the heading shines. */
+.section h2 .stamp { -webkit-text-fill-color: var(--red); background: none; font-size: 22px; padding: 4px 14px 3px; border-width: 3px; margin-left: 14px; }

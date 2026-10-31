@@ -228,8 +228,100 @@ function initShotsScroll() {
   addEventListener("load", sync);
 }
 
+function initShotsCarousel() {
+  const row = document.querySelector(".shots");
+  if (!row) return;
+
+  const slides = [...row.children];
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const narrow = matchMedia("(max-width: 899px)");
+  let manuallyControlled = false;
+  let timer;
+  let pointerStart;
+
+  const canAutoAdvance = () =>
+    narrow.matches && !reduceMotion.matches && row.scrollWidth > row.clientWidth + 1;
+
+  const stop = () => {
+    manuallyControlled = true;
+    clearInterval(timer);
+  };
+
+  const sync = () => {
+    clearInterval(timer);
+    if (!canAutoAdvance() || manuallyControlled) return;
+    timer = setInterval(() => {
+      if (document.hidden || row.getBoundingClientRect().bottom < 0 ||
+          row.getBoundingClientRect().top > innerHeight) return;
+
+      const bounds = row.getBoundingClientRect();
+      const tabletLayout = narrow.matches && innerWidth >= 600;
+      const reference = tabletLayout
+        ? bounds.left + row.clientLeft
+        : bounds.left + row.clientWidth / 2;
+      const current = slides.reduce((best, slide, index) => {
+        const slideBounds = slide.getBoundingClientRect();
+        const position = tabletLayout
+          ? slideBounds.left
+          : slideBounds.left + slideBounds.width / 2;
+        const distance = Math.abs(position - reference);
+        return distance < best.distance ? { index, distance } : best;
+      }, { index: 0, distance: Infinity }).index;
+      if (current === slides.length - 1) {
+        row.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        const next = slides[current + 1];
+        const nextBounds = next.getBoundingClientRect();
+        const left = tabletLayout
+          ? nextBounds.left - bounds.left - row.clientLeft
+          : nextBounds.left + nextBounds.width / 2 - reference;
+        row.scrollBy({ left, behavior: "smooth" });
+      }
+    }, 5000);
+  };
+
+  row.addEventListener("pointerdown", (event) => {
+    pointerStart = { x: event.clientX, y: event.clientY };
+  }, { passive: true });
+  row.addEventListener("pointermove", (event) => {
+    if (!pointerStart) return;
+    const dx = Math.abs(event.clientX - pointerStart.x);
+    const dy = Math.abs(event.clientY - pointerStart.y);
+    if (dx > 8 && dx > dy) {
+      pointerStart = undefined;
+      stop();
+    }
+  }, { passive: true });
+  row.addEventListener("pointerup", (event) => {
+    if (!pointerStart) return;
+    const dx = Math.abs(event.clientX - pointerStart.x);
+    const dy = Math.abs(event.clientY - pointerStart.y);
+    if (dx > 8 && dx > dy) stop();
+    pointerStart = undefined;
+  }, { passive: true });
+  row.addEventListener("pointercancel", () => {
+    pointerStart = undefined;
+  }, { passive: true });
+  row.addEventListener("wheel", (event) => {
+    if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) stop();
+  }, { passive: true });
+  reduceMotion.addEventListener("change", sync);
+  narrow.addEventListener("change", sync);
+  addEventListener("resize", sync);
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(sync).observe(row);
+  } else {
+    addEventListener("load", sync);
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) sync();
+  });
+  sync();
+}
+
 initTheme();
 initMenu();
 initShotsScroll();
+initShotsCarousel();
 initHeroInk();
 initMarginInk();
