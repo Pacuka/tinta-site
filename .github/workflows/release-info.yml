@@ -1,0 +1,29 @@
+# Keeps the version and size next to the download button in sync with the
+# latest Tinta release. Runs on a schedule (and by hand); commits only when
+# something changed, which also redeploys GitHub Pages.
+name: Kiadás adatai
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Legújabb kiadás beírása
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/update_release_info.py
+      - name: Commit, ha változott
+        run: |
+          if git diff --quiet; then echo "Nincs változás."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Letöltés: verzió és méret frissítése"
+          git push
