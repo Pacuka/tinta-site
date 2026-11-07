@@ -37,6 +37,7 @@
     </a>
     <nav class="nav" id="site-nav" aria-label="Főmenü">
       <a href="#funkciok">Funkciók</a>
+      <a href="#ora">Óra</a>
       <a href="#szuloknek">Szülőknek</a>
       <a href="#letoltes">Letöltés</a>
       <a href="#gyik">GYIK</a>
@@ -128,6 +129,31 @@
     </div>
   </section>
 
+  <!-- Óra -->
+  <section class="section" id="ora">
+    <div class="container">
+      <div class="col">
+        <p class="sec-no" aria-hidden="true">Óra</p>
+        <h2>Ránézel az órádra, és tudod, melyik terembe mész.</h2>
+        <p class="lead">Ha Wear OS-es órád van (például Galaxy Watch4 vagy újabb), a Tinta azon is fut. Az adatokat a telefonos Tintától kapja, úgyhogy az órán nem kell belépni.</p>
+      </div>
+      <ul class="watches">
+        <li><figure>
+          <img src="img/shots/ora-kezdolap.webp" width="400" height="400" loading="lazy" alt="Tinta az órán: a kör alakú csík mutatja az óra haladását, középen a tantárgy, a hátralévő percek és a terem.">
+          <figcaption>Mennyi van hátra, és hol lesz a következő óra</figcaption></figure></li>
+        <li><figure>
+          <img src="img/shots/ora-orarend.webp" width="400" height="400" loading="lazy" alt="Órarend az órán: a tintavonal mellett a nap órái, az elmaradt piros, a helyettesítés narancs.">
+          <figcaption>A mai és a következő tanítási nap órái</figcaption></figure></li>
+        <li><figure>
+          <img src="img/shots/ora-teendok.webp" width="400" height="400" loading="lazy" alt="Teendők az órán: a következő napok házijai és dolgozatai tantárggyal és nappal.">
+          <figcaption>Házik és dolgozatok a következő 7 napból</figcaption></figure></li>
+      </ul>
+      <div class="col">
+        <p>A számlapra is kiteheted egy kis mezőben a következő órát, vagy oldalra húzva gyorsnézetben megnézheted, az app megnyitása nélkül. A tanulmányi átlagod és a friss jegyeid is ott vannak. A részletekhez ott a telefon, ez egy óra, nem regényolvasó.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- 4. Szülőknek -->
   <section class="section" id="szuloknek">
     <div class="container split">
@@ -181,6 +207,13 @@
           </p>
         </div>
       </div>
+      <div class="watch-install" id="ora-telepites">
+        <h3>Wear OS óra</h3>
+        <p>Az óra-appot a telefonos Tinta mellé kell feltenned. Az első telepítéshez kell egy számítógép, mert az óra nem tud APK-t letölteni. Az útmutató lépésről lépésre végigvezet, és Androidos telefon kell hozzá. A <strong>tinta-wear</strong> kezdetű fájlt ugyanott találod, ahol a többit.</p>
+        <p class="platform-actions">
+          <a class="text-link" href="https://github.com/Pacuka/tinta/blob/main/wear-os.md">Órás útmutató <span aria-hidden="true">→</span></a>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -205,6 +238,10 @@
         <div class="qa">
           <h3>Hogyan frissül?</h3>
           <p>Androidon a Tinta minden indításkor megnézi a GitHubon, van-e új verzió, és ha van, szól. Egy koppintással letöltöd, a telepítést pedig a telefonod kéri jóváhagyni. Az adataid és a beállításaid megmaradnak. Ha az <a href="https://obtainium.imranr.dev/">Obtainiumot</a> használod, add hozzá ezt a címet: <span class="nowrap">github.com/Pacuka/tinta</span>, és onnantól az is figyeli a frissítéseket.</p>
+        </div>
+        <div class="qa">
+          <h3>Milyen órán megy?</h3>
+          <p>Wear OS-es órán, például Galaxy Watch4-en vagy újabbon, Androidos telefon mellett. Galaxy Watch7-en próbáltam ki, másokon még nem. Apple Watch-ra nincs, és a régi, Tizen-es Galaxy órákon sem fut.</p>
         </div>
         <div class="qa">
           <h3>Honnan tudom, hogy a fájl tényleg tőled van?</h3>

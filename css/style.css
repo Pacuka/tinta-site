@@ -649,6 +649,47 @@ strong {
   text-wrap: balance;
 }
 
+/* ---------- watch ---------- */
+.watches {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+  display: grid;
+  gap: 32px;
+  justify-items: center;
+}
+.watches figure {
+  margin: 0;
+  max-width: 260px;
+  text-align: center;
+}
+.watches img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  background: #000;
+  border: 7px solid #24262c;
+}
+.watches figcaption {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--muted);
+  text-wrap: balance;
+}
+@media (min-width: 760px) {
+  .watches {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+.watch-install {
+  margin-top: 44px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  max-width: 900px;
+}
+
 /* ---------- features ---------- */
 .features {
   margin-top: 36px;
