@@ -59,6 +59,16 @@
       <li><strong>Beküldött adatok:</strong> az alkalmazásból elküldött üzenetek, igazolások és fogadóóra-foglalások közvetlenül a KRÉTA rendszerébe, így az érintett oktatási intézményhez kerülnek.</li>
     </ul>
 
+    <h2>Az óra-app (Wear OS)</h2>
+    <ul>
+      <li><strong>Honnan kapja az adatokat:</strong> az óra-app nem kapcsolódik a KRÉTA-hoz és az internethez, és nem kér bejelentkezést. Az adatokat a telefonon futó Tinta küldi át, miután a két eszközt egy hatjegyű kóddal párosították.</li>
+      <li><strong>Milyen adatok kerülnek az órára:</strong> az órarend (tantárgy, terem, tanár, időpont, elmaradás vagy helyettesítés), a legutóbbi jegyek, a feljegyzések szövege, a hiányzások, az üzenetek tárgya és feladója, a teendők (házi feladatok és számonkérések tantárgya és határideje), valamint a tanulmányi átlag. A hozzáférési adatok nem kerülnek át az órára.</li>
+      <li><strong>Átvitel:</strong> az adatok a Google Play-szolgáltatások órás adatkapcsolatán (Wearable Data Layer) keresztül jutnak el az órára. Ha a telefon és az óra Bluetooth-on kapcsolódik, az átvitel közvetlenül, titkosított csatornán történik. Ha nincs Bluetooth-kapcsolat, az adatok a Google szerverein keresztül, végponttól végpontig titkosítva jutnak el az órára. Az adatokat csak a két eszközön futó Tinta olvashatja. A Tinta ehhez nem használ saját szervert.</li>
+      <li><strong>Tárolás az órán:</strong> az óra-app a legutóbb kapott adatokat az órán tárolja, hogy kapcsolat nélkül is látszódjanak. Az óra-app jelenlegi verziója nem tiltja le a felhőmentést, ezért ezek az adatok bekerülhetnek az óra Google-fiókhoz kötött biztonsági mentésébe, ha az órán be van kapcsolva a mentés.</li>
+      <li><strong>Számlap és gyorsnézet:</strong> ha a felhasználó beállítja, az aktuális óra adatai a számlapon vagy a gyorsnézeti lapon is megjelennek, így az óra kijelzőjén mások számára is láthatók lehetnek.</li>
+      <li><strong>Kikapcsolás:</strong> a telefonos Tintában a <strong>Beállítások → Egyéb → WearOS</strong> menüben a szinkronizálás kikapcsolható.</li>
+    </ul>
+
     <h2>Mikor kapcsolódik máshová az app?</h2>
     <p>Az alábbi szolgáltatásokhoz történő kapcsolódás során a szolgáltatók megismerhetik a kapcsolat technikai adatait, például az IP-címet.</p>
     <ul>
@@ -69,6 +79,7 @@
 
     <h2>Kijelentkezés és törlés</h2>
     <p>Kijelentkezéskor az alkalmazás törli az eszközről az adott fiók hozzáférési adatait és a letöltött tanulmányi adatokat. Az alkalmazás eltávolításakor az eszközön tárolt összes adat törlődik.</p>
+    <p>Az órán tárolt adatok a telefonon történő kijelentkezéskor és az óra leválasztásakor nem törlődnek, csak az óra-app eltávolításakor. Ha a telefonról kijelentkezik, de az órán marad a Tinta, az óra a legutóbb kapott adatokat mutatja tovább.</p>
     <p>Mivel a Tinta fejlesztője a felhasználókról semmilyen adatot nem gyűjt és nem tárol, nincs olyan adat, amelyet kiadhatna, helyesbíthetne vagy törölhetne. A KRÉTA rendszerében tárolt adatokkal kapcsolatban az érintett oktatási intézményhez vagy a KRÉTA üzemeltetőjéhez, az Educational Development Informatikai Zrt.-hez lehet fordulni.</p>
 
     <h2>Ez a weboldal</h2>
@@ -78,7 +89,7 @@
     <h2>Kapcsolat</h2>
     <p>Kérdés vagy hibajelzés a <a href="https://github.com/Pacuka/tinta/issues">GitHubon</a> küldhető be. A hibajegyek nyilvánosak, ezért kérjük, ne szerepeljen bennük személyes vagy tanulmányi adat.</p>
 
-    <p class="small">Utoljára frissítve: 2026. október 31.</p>
+    <p class="small">Utoljára frissítve: 2026. november 8.</p>
   </article>
 </main>
 
