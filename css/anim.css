@@ -30,7 +30,7 @@
 .a-ripple { position: absolute; border-radius: 50%; background: currentColor; opacity: .35; transform: scale(0); animation: a-ripple .6s ease-out forwards; pointer-events: none; }
 @keyframes a-ripple { to { transform: scale(4); opacity: 0; } }
 .btn { position: relative; overflow: hidden; }
-.section h2.is-in { background: linear-gradient(90deg, currentColor 40%, var(--accent, #3b5bdb) 50%, currentColor 60%) 0 0 / 300% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: a-shine 2.2s ease .4s 1 both; }
+.section h2.is-in { background: linear-gradient(90deg, currentColor 40%, var(--accent, #3b5bdb) 50%, currentColor 60%) 0 0 / 300% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: .2em; margin-bottom: -.2em; animation: a-shine 2.2s ease .4s 1 both; }
 @keyframes a-shine { from { background-position: 100% 0; } to { background-position: 0 0; } }
 .shots li .screen { will-change: transform; }
 @media (prefers-reduced-motion: reduce) {
