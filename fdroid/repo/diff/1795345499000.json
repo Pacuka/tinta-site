@@ -1,0 +1,20 @@
+{
+  "repo": {
+    "icon": {
+      "en-US": {
+        "sha256": "92dc0adbc8323733772666de0dea42141b11568dddf7e51496c486422cd0211b",
+        "size": 23088
+      }
+    },
+    "timestamp": 1795345546000
+  },
+  "packages": {
+    "hu.pacuka.tinta": {
+      "metadata": {
+        "description": {
+          "hu-HU": "A Tinta egy <b>nem hivatalos</b>, nyílt forráskódú e-napló alkalmazás az e-KRÉTA rendszerhez. Tanulóktól, tanulóknak. A Folio továbbfejlesztése.\n\n<b>Mit tud?</b>\n• Jegyek, átlagok, statisztika és jegykalkulátor\n• Órarend: az elmaradó óra és a helyettesítés jól látható (ki tartja az órát)\n• Házi feladatok a beírás pontos idejével, számonkérések, hiányzások, üzenetek\n• Értesítés új jegyről, üzenetről, házi feladatról és órarend-változásról. Nincs push-szerver, minden a telefonon fut.\n• Belépés a KRÉTA hivatalos bejelentkező oldalán (a jelszót nem a Tinta kéri be)\n• Wear OS óra-app: mai órák és értesítések a csuklón\n• Saját témák, névnapi és szülinapi köszöntés\n\n<b>Adatvédelem</b>\nA Tinta nem gyűjt statisztikát és nem küld hibajelentést. A tanulmányi adatok csak a telefon és a KRÉTA szerverei között közlekednek, titkosított kapcsolaton.\n\n<b>Fontos</b>\nA Tinta nem áll kapcsolatban az e-KRÉTA rendszer fejlesztőjével és üzemeltetőjével (eKRÉTA Informatikai Zrt.). Az „e-KRÉTA” név a tulajdonosáé, itt csak a kompatibilitás jelzésére szerepel.\n"
+        }
+      }
+    }
+  }
+}

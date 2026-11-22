@@ -1,0 +1,43 @@
+{
+  "antiFeatures": {
+    "NonFreeNet": {
+      "apps": [
+        "hu.pacuka.tinta"
+      ]
+    }
+  },
+  "apksigner": "/usr/bin/apksigner",
+  "archivePolicy0": [],
+  "commandLine": [
+    "/home/pacuka/.local/bin/fdroid update",
+    "--pretty"
+  ],
+  "disabled": [],
+  "endTimestamp": 1795345548274,
+  "failedBuilds": {},
+  "jarsigner": "/usr/lib/jvm/java-27-jdk/bin/jarsigner",
+  "keytool": "/usr/lib/jvm/java-27-jdk/bin/keytool",
+  "needsUpdate": [
+    "hu.pacuka.tinta"
+  ],
+  "noPackages": [
+    "hu.pacuka.tinta"
+  ],
+  "noUpdateCheck": [
+    "hu.pacuka.tinta"
+  ],
+  "stages": {
+    "archive_old_apks archive": 1795345544622,
+    "delete_disabled_builds": 1795345544613,
+    "index.make archive": 1795345544623,
+    "index.make repo": 1795345546453,
+    "prepare_apps archive": 1795345544622,
+    "prepare_apps repo": 1795345546451,
+    "process_apks": 1795345544621,
+    "read_added_date_from_all_apks": 1795345544622,
+    "remove_apks": 1795345544622,
+    "scan_repo_files": 1795345544621
+  },
+  "startTimestamp": 1795341944000,
+  "subcommand": "update"
+}
