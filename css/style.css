@@ -1,4 +1,4 @@
-/* Tinta weboldal — „csendes” változat: egy keskeny szöveghasáb,
+/* Tinta weboldal: „csendes” változat, egy keskeny szöveghasáb,
    a képernyőképek beszélnek. Sötét (alap) és fehér téma. */
 
 @font-face {
@@ -412,7 +412,7 @@ strong {
 .hero-text {
   max-width: 640px;
 }
-/* big home screen next to the headline — desktop only (on phones it's
+/* big home screen next to the headline, desktop only (on phones it's
    the first picture of the screenshot row) */
 .hero-shot {
   display: none;
@@ -569,7 +569,7 @@ strong {
     display: none;
   }
 }
-/* the bare screen, cut like a phone display — no fake device frame */
+/* the bare screen, cut like a phone display, no fake device frame */
 .screen {
   border-radius: 22px;
   overflow: hidden;
