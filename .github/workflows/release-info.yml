@@ -20,10 +20,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 tools/update_release_info.py
+      - name: AltStore-forrás frissítése
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/update_altstore.py
       - name: Commit, ha változott
         run: |
           if git diff --quiet; then echo "Nincs változás."; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Letöltés: verzió és méret frissítése"
+          git add -A altstore.json index.html
+          git commit -m "Letöltés: verzió, méret és AltStore-forrás frissítése"
           git push

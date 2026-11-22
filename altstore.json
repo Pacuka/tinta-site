@@ -1,0 +1,64 @@
+{
+  "name": "Tinta",
+  "subtitle": "Nem hivatalos e-napló app KRÉTA-hoz",
+  "description": "A Tinta saját AltStore-forrása. Innen az app frissítései is megjelennek.",
+  "iconURL": "https://tinta.pacuka.hu/img/icon-512.png",
+  "website": "https://tinta.pacuka.hu/",
+  "tintColor": "#3F5EF0",
+  "featuredApps": [
+    "hu.pacuka.tinta"
+  ],
+  "apps": [
+    {
+      "name": "Tinta",
+      "bundleIdentifier": "hu.pacuka.tinta",
+      "developerName": "Pacuka",
+      "subtitle": "E-napló app KRÉTA-fiókhoz",
+      "localizedDescription": "Nem hivatalos, nyílt forráskódú e-napló app a KRÉTA rendszerhez, diákoknak és szülőknek. Jegyek, átlagok, órarend, házi feladatok, számonkérések, hiányzások, üzenetek és fogadóórák egy helyen.\n\nBelépés a KRÉTA hivatalos bejelentkező oldalán, a jelszavadat a Tinta nem kéri be. Nem gyűjt statisztikát, nincs benne reklám.\n\nA Tinta nem áll kapcsolatban az e-KRÉTA rendszer fejlesztőjével és üzemeltetőjével (eKRÉTA Informatikai Zrt.).",
+      "iconURL": "https://tinta.pacuka.hu/img/icon-512.png",
+      "tintColor": "#3F5EF0",
+      "category": "utilities",
+      "screenshots": [
+        {
+          "imageURL": "https://tinta.pacuka.hu/img/altstore/kezdolap-dark.png",
+          "width": 486,
+          "height": 1080
+        },
+        {
+          "imageURL": "https://tinta.pacuka.hu/img/altstore/orarend-dark.png",
+          "width": 486,
+          "height": 1080
+        },
+        {
+          "imageURL": "https://tinta.pacuka.hu/img/altstore/jegyek-dark.png",
+          "width": 486,
+          "height": 1080
+        },
+        {
+          "imageURL": "https://tinta.pacuka.hu/img/altstore/fogadoorak-dark.png",
+          "width": 486,
+          "height": 1080
+        }
+      ],
+      "versions": [
+        {
+          "version": "1.7.0",
+          "buildVersion": "12",
+          "date": "2026-11-21",
+          "localizedDescription": "Tinta 1.7.0: Üveg téma, órarend-widget\nÚj téma: Üveg\n• Áttetsző, homályos menük, ablakok és alsó lapok, a fő oldalak mögött színes háttérrel.\n• Androidon a telefon színeit veszi át (a háttérképből vagy a rendszertémából), iPhone-on a Tinta kékjét használja.\n• A Beállításokban a többi téma mellett választható (Kobalt, Fekete-sárga, Petrol, Üveg). iPhone-on új telepítésnél ez az alapértelmezett.\nÓrarend-widget (Android)\n• Kezdőképernyőre, és ahol a telefon engedi, a zárolási képernyőre is.\n• Három méret: a mostani vagy következő óra, mellé a rákövetkező, vagy az egész nap.\n• Visszaszámol az óra végéig vagy kezdetéig. Egy órára koppintva az az óra nyílik meg az órarendben.\n• Az app témájának színeit követi.\nJavítások\n• Az értesítések bezárt appnál is megjönnek (új jegy, számonkérés, hiányzás, üzenet, házi).\n• Értesítésre koppintva nemcsak a menüsáv, hanem az oldal is átvált.\n• Zárolási képernyőről indítva az app nem marad üres.\n• A házi, az üzenet, a feljegyzés és a többi szöveg újra kimásolható.\n• Ha a tanár módosított egy házit, a korábbi változata rendes szövegként jelenik meg, nem nyers HTML-ként.\nBiztonság\n• Az app már nem kér hozzáférést a tárhelyhez és a fájlokhoz.\n• Kikerült egy nem használt engedély (más appok fölé rajzolás).\nMelyik fájl kell? Telefonra a `tinta-1.7.0-arm64-v8a.apk`, régebbi telefonra az `armeabi-v7a`. Órára kézzel a `tinta-wear-1.7.0.apk`, vagy a telefonról: Beállítások → Egyéb → WearOS → Óra-app frissítése. iPhone-ra a `Tinta.ipa`.",
+          "downloadURL": "https://github.com/Pacuka/tinta/releases/download/v1.7.0/Tinta.ipa",
+          "size": 14246997,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "The app requires the camera access to set a custom profile picture.",
+          "NSPhotoLibraryUsageDescription": "The app requires the photo library to set a custom profile picture."
+        }
+      }
+    }
+  ],
+  "news": []
+}
