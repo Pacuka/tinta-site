@@ -6,6 +6,56 @@
         "size": 23088
       }
     },
-    "timestamp": 1795345546000
+    "timestamp": 1795346411000
+  },
+  "packages": {
+    "hu.pacuka.tinta": {
+      "metadata": {
+        "screenshots": {
+          "phone": {
+            "en-US": [
+              {
+                "name": "/hu.pacuka.tinta/en-US/phoneScreenshots/1-kezdolap-dark.png",
+                "sha256": "98aee5a77df1cd2fbe53de75b88a3f77833b2614f0b3ff445c1dd27712172141",
+                "size": 179407
+              },
+              {
+                "name": "/hu.pacuka.tinta/en-US/phoneScreenshots/2-orarend-dark.png",
+                "sha256": "0f18c3fe4b5eef90e7ee54556f10a603354a11df3de8da1a0fe62f5edd41e62f",
+                "size": 113067
+              },
+              {
+                "name": "/hu.pacuka.tinta/en-US/phoneScreenshots/3-jegyek-dark.png",
+                "sha256": "8d67ab7fb22b0f1e47d7da1a27f9648c6ee3cf4fd1226bca59c45bed8d40e917",
+                "size": 150993
+              },
+              {
+                "name": "/hu.pacuka.tinta/en-US/phoneScreenshots/4-fogadoorak-dark.png",
+                "sha256": "e5276a4e067b7696504d3df90942399b64197fea1199cfce7d3fa85562565c89",
+                "size": 126122
+              },
+              {
+                "name": "/hu.pacuka.tinta/en-US/phoneScreenshots/5-kezdolap-light.png",
+                "sha256": "6de9e77cdd05306d241e2a84020cb65d5054fe3c2ff1f9090469375f3783cf01",
+                "size": 169704
+              }
+            ]
+          }
+        },
+        "summary": {
+          "en-US": "Unofficial e-diary app for KRÉTA: grades, timetable, homework, notifications."
+        },
+        "description": {
+          "en-US": "Tinta is an <b>unofficial</b>, open-source e-diary app for the Hungarian e-KRÉTA school system, made by students for students and parents. It is based on Folio. The app is in Hungarian.\n\n<b>Features</b>\n• Grades, averages, statistics and a grade calculator\n• Timetable: cancelled lessons and substitutions are clearly marked\n• Homework with exact posting time, tests, absences, messages\n• Notifications for new grades, messages, homework and timetable changes. No push server, everything runs on your phone.\n• Login on the official KRÉTA login page (Tinta never asks for your password)\n• Wear OS watch app: today's lessons and notifications on your wrist\n• Custom themes\n\n<b>Privacy</b>\nTinta collects no statistics and sends no crash reports. Your school data only travels between your phone and the KRÉTA servers, over an encrypted connection.\n\n<b>Note</b>\nTinta is not affiliated with the developer or operator of e-KRÉTA (eKRÉTA Informatikai Zrt.). The name \"e-KRÉTA\" belongs to its owner and is used here only to indicate compatibility.\n"
+        },
+        "icon": {
+          "en-US": {
+            "name": "/hu.pacuka.tinta/en-US/icon_LTM6HUfwRMdzMuuz6CesYooVXwUKqUrd1AKZiU0tzAQ=.png",
+            "sha256": "2d333a1d47f044c77332ebb3e827ac628a155f050aa94addd40299894d2dcc04",
+            "size": 21941
+          }
+        }
+      }
+    }
   }
 }

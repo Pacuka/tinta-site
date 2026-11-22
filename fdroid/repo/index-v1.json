@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1795345546000,
+    "timestamp": 1795346411000,
     "version": 20002,
     "name": "Tinta",
     "icon": "icon.png",
@@ -31,7 +31,17 @@
       "lastUpdated": 1795345497000,
       "localized": {
         "en-US": {
-          "name": "Tinta"
+          "description": "Tinta is an <b>unofficial</b>, open-source e-diary app for the Hungarian e-KR\u00c9TA school system, made by students for students and parents. It is based on Folio. The app is in Hungarian.\n\n<b>Features</b>\n\u2022 Grades, averages, statistics and a grade calculator\n\u2022 Timetable: cancelled lessons and substitutions are clearly marked\n\u2022 Homework with exact posting time, tests, absences, messages\n\u2022 Notifications for new grades, messages, homework and timetable changes. No push server, everything runs on your phone.\n\u2022 Login on the official KR\u00c9TA login page (Tinta never asks for your password)\n\u2022 Wear OS watch app: today's lessons and notifications on your wrist\n\u2022 Custom themes\n\n<b>Privacy</b>\nTinta collects no statistics and sends no crash reports. Your school data only travels between your phone and the KR\u00c9TA servers, over an encrypted connection.\n\n<b>Note</b>\nTinta is not affiliated with the developer or operator of e-KR\u00c9TA (eKR\u00c9TA Informatikai Zrt.). The name \"e-KR\u00c9TA\" belongs to its owner and is used here only to indicate compatibility.\n",
+          "icon": "icon_LTM6HUfwRMdzMuuz6CesYooVXwUKqUrd1AKZiU0tzAQ=.png",
+          "name": "Tinta",
+          "phoneScreenshots": [
+            "1-kezdolap-dark.png",
+            "2-orarend-dark.png",
+            "3-jegyek-dark.png",
+            "4-fogadoorak-dark.png",
+            "5-kezdolap-light.png"
+          ],
+          "summary": "Unofficial e-diary app for KR\u00c9TA: grades, timetable, homework, notifications."
         },
         "hu-HU": {
           "description": "A Tinta egy <b>nem hivatalos</b>, ny\u00edlt forr\u00e1sk\u00f3d\u00fa e-napl\u00f3 alkalmaz\u00e1s az e-KR\u00c9TA rendszerhez. Tanul\u00f3kt\u00f3l, tanul\u00f3knak. A Folio tov\u00e1bbfejleszt\u00e9se.\n\n<b>Mit tud?</b>\n\u2022 Jegyek, \u00e1tlagok, statisztika \u00e9s jegykalkul\u00e1tor\n\u2022 \u00d3rarend: az elmarad\u00f3 \u00f3ra \u00e9s a helyettes\u00edt\u00e9s j\u00f3l l\u00e1that\u00f3 (ki tartja az \u00f3r\u00e1t)\n\u2022 H\u00e1zi feladatok a be\u00edr\u00e1s pontos idej\u00e9vel, sz\u00e1monk\u00e9r\u00e9sek, hi\u00e1nyz\u00e1sok, \u00fczenetek\n\u2022 \u00c9rtes\u00edt\u00e9s \u00faj jegyr\u0151l, \u00fczenetr\u0151l, h\u00e1zi feladatr\u00f3l \u00e9s \u00f3rarend-v\u00e1ltoz\u00e1sr\u00f3l. Nincs push-szerver, minden a telefonon fut.\n\u2022 Bel\u00e9p\u00e9s a KR\u00c9TA hivatalos bejelentkez\u0151 oldal\u00e1n (a jelsz\u00f3t nem a Tinta k\u00e9ri be)\n\u2022 Wear OS \u00f3ra-app: mai \u00f3r\u00e1k \u00e9s \u00e9rtes\u00edt\u00e9sek a csukl\u00f3n\n\u2022 Saj\u00e1t t\u00e9m\u00e1k, n\u00e9vnapi \u00e9s sz\u00fclinapi k\u00f6sz\u00f6nt\u00e9s\n\n<b>Adatv\u00e9delem</b>\nA Tinta nem gy\u0171jt statisztik\u00e1t \u00e9s nem k\u00fcld hibajelent\u00e9st. A tanulm\u00e1nyi adatok csak a telefon \u00e9s a KR\u00c9TA szerverei k\u00f6z\u00f6tt k\u00f6zlekednek, titkos\u00edtott kapcsolaton.\n\n<b>Fontos</b>\nA Tinta nem \u00e1ll kapcsolatban az e-KR\u00c9TA rendszer fejleszt\u0151j\u00e9vel \u00e9s \u00fczemeltet\u0151j\u00e9vel (eKR\u00c9TA Informatikai Zrt.). Az \u201ee-KR\u00c9TA\u201d n\u00e9v a tulajdonos\u00e1\u00e9, itt csak a kompatibilit\u00e1s jelz\u00e9s\u00e9re szerepel.\n",
