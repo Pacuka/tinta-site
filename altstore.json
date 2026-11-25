@@ -42,6 +42,15 @@
       ],
       "versions": [
         {
+          "version": "1.7.1",
+          "buildVersion": "13",
+          "date": "2026-11-24",
+          "localizedDescription": "Tinta 1.7.1: javítás iPhone-ra\nJavítás\n• iPhone-on az alsó menü már nem lebeg túl magasan, rendesen a képernyő alján ül.\nAndroidon nincs érdemi változás, onnan nem muszáj frissíteni.\nMelyik fájl kell? Telefonra a `tinta-1.7.1-arm64-v8a.apk`, régebbi telefonra az `armeabi-v7a`. Órára kézzel a `tinta-wear-1.7.1.apk`, vagy a telefonról: Beállítások → Egyéb → WearOS → Óra-app frissítése. iPhone-ra a `Tinta.ipa`.",
+          "downloadURL": "https://github.com/Pacuka/tinta/releases/download/v1.7.1/Tinta.ipa",
+          "size": 14257502,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "1.7.0",
           "buildVersion": "12",
           "date": "2026-11-21",
